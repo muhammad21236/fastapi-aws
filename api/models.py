@@ -14,6 +14,7 @@ if os.getenv("DEPLOYMENT_ENVIRONMENT") == 'DEV':
 else:
     engine = create_engine(os.getenv("DB_URL"))
 
+
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 class User(Base):
